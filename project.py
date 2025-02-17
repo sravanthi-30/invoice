@@ -34,7 +34,7 @@ def generate_custom_pdf(title, customer_data, items):
 
         c.drawString(50, y_offset, item_name)
         c.drawString(200, y_offset, str(quantity))
-        c.drawString(300, y_offset, f"${price:.2f}")
+        c.drawString(300, y_offset, f"{price:.2f}")
         c.drawString(400, y_offset, description)
 
         total_amount += quantity * price
@@ -42,7 +42,7 @@ def generate_custom_pdf(title, customer_data, items):
 
         c.drawString(200, y_offset - 20, "Total")
 
-        c.drawString(300, y_offset - 20, f"${total_amount:.2f}")
+        c.drawString(300, y_offset - 20, f"{total_amount:.2f}")
 
 
         c.save()
